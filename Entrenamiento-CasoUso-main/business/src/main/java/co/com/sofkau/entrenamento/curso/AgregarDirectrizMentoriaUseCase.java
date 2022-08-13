@@ -10,6 +10,7 @@ public class AgregarDirectrizMentoriaUseCase extends UseCase<RequestCommand<Agre
 
     @Override
     public void executeUseCase(RequestCommand<AgregarDirectrizMentoria> agregarDirectrizMentoriaRequestCommand) {
+
         var command = agregarDirectrizMentoriaRequestCommand.getCommand();
         var curso = Curso.from(
                 command.getCursoId(), repository().getEventsBy(command.getCursoId().value())
